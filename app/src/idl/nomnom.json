@@ -1,0 +1,152 @@
+{
+  "address": "7VDmuJyPxyKA9rzqoupukyLZJXGgbvzZpZPTb3AGFTNi",
+  "metadata": {
+    "name": "nomnom",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "NomNom (Agar.sol) with MagicBlock Ephemeral Rollups"
+  },
+  "instructions": [
+    {
+      "name": "initialize_arena",
+      "discriminator": [11, 37, 221, 1, 205, 120, 25, 230],
+      "accounts": [
+        { "name": "arena", "writable": true, "pda": { "seeds": [{ "kind": "const", "value": [97, 114, 101, 110, 97] }] } },
+        { "name": "vault", "writable": true },
+        { "name": "admin", "writable": true, "signer": true },
+        { "name": "system_program", "address": "11111111111111111111111111111111" }
+      ],
+      "args": [{ "name": "min_deposit", "type": "u64" }]
+    },
+    {
+      "name": "spawn_player",
+      "discriminator": [128, 8, 217, 15, 73, 1, 73, 51],
+      "accounts": [
+        { "name": "arena", "writable": true },
+        { "name": "vault", "writable": true },
+        { "name": "player", "writable": true, "pda": { "seeds": [{ "kind": "const", "value": [112, 108, 97, 121, 101, 114] }, { "kind": "account", "path": "player_signer" }] } },
+        { "name": "player_signer", "writable": true, "signer": true },
+        { "name": "system_program", "address": "11111111111111111111111111111111" }
+      ],
+      "args": [
+        { "name": "name", "type": "string" },
+        { "name": "deposit_amount", "type": "u64" },
+        { "name": "color", "type": "u8" },
+        { "name": "start_x", "type": "i32" },
+        { "name": "start_y", "type": "i32" }
+      ]
+    },
+    {
+      "name": "delegate_player",
+      "discriminator": [235, 159, 245, 102, 161, 199, 254, 89],
+      "accounts": [
+        { "name": "payer", "writable": true, "signer": true },
+        { "name": "pda", "writable": true }
+      ],
+      "args": []
+    },
+    {
+      "name": "move_player",
+      "discriminator": [17, 58, 68, 221, 186, 117, 140, 231],
+      "accounts": [
+        { "name": "player", "writable": true },
+        { "name": "authority", "signer": true }
+      ],
+      "args": [
+        { "name": "new_x", "type": "i32" },
+        { "name": "new_y", "type": "i32" },
+        { "name": "vx", "type": "i16" },
+        { "name": "vy", "type": "i16" }
+      ]
+    },
+    {
+      "name": "eat_pellet",
+      "discriminator": [75, 52, 169, 184, 47, 25, 184, 53],
+      "accounts": [
+        { "name": "player", "writable": true },
+        { "name": "authority", "signer": true }
+      ],
+      "args": [{ "name": "mass_gain", "type": "u32" }]
+    },
+    {
+      "name": "eat_player",
+      "discriminator": [205, 66, 164, 255, 146, 212, 94, 89],
+      "accounts": [
+        { "name": "predator", "writable": true },
+        { "name": "victim", "writable": true },
+        { "name": "authority", "signer": true }
+      ],
+      "args": []
+    },
+    {
+      "name": "commit_player",
+      "discriminator": [240, 196, 120, 93, 216, 101, 42, 253],
+      "accounts": [
+        { "name": "payer", "writable": true, "signer": true },
+        { "name": "player", "writable": true }
+      ],
+      "args": []
+    },
+    {
+      "name": "cash_out_and_undelegate",
+      "discriminator": [82, 240, 119, 131, 175, 178, 87, 111],
+      "accounts": [
+        { "name": "payer", "writable": true, "signer": true },
+        { "name": "player", "writable": true }
+      ],
+      "args": []
+    },
+    {
+      "name": "claim_payout",
+      "discriminator": [127, 240, 132, 62, 227, 198, 146, 133],
+      "accounts": [
+        { "name": "arena" },
+        { "name": "vault", "writable": true },
+        { "name": "player", "writable": true },
+        { "name": "player_signer", "writable": true, "signer": true },
+        { "name": "system_program", "address": "11111111111111111111111111111111" }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Arena",
+      "discriminator": [252, 102, 53, 90, 82, 94, 196, 113],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "admin", "type": "pubkey" },
+          { "name": "vault", "type": "pubkey" },
+          { "name": "total_players", "type": "u32" },
+          { "name": "min_deposit", "type": "u64" },
+          { "name": "vault_bump", "type": "u8" },
+          { "name": "bump", "type": "u8" }
+        ]
+      }
+    },
+    {
+      "name": "Player",
+      "discriminator": [205, 222, 112, 7, 165, 155, 206, 218],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "authority", "type": "pubkey" },
+          { "name": "arena", "type": "pubkey" },
+          { "name": "name", "type": { "array": ["u8", 16] } },
+          { "name": "x", "type": "i32" },
+          { "name": "y", "type": "i32" },
+          { "name": "vx", "type": "i16" },
+          { "name": "vy", "type": "i16" },
+          { "name": "mass", "type": "u64" },
+          { "name": "score", "type": "u64" },
+          { "name": "kills", "type": "u32" },
+          { "name": "color", "type": "u8" },
+          { "name": "is_alive", "type": "bool" },
+          { "name": "deposit_lamports", "type": "u64" },
+          { "name": "bump", "type": "u8" }
+        ]
+      }
+    }
+  ]
+}

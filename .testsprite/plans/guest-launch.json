@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.15.0/schemas/plan.schema.json",
+  "projectId": "__TESTSPRITE_PROJECT_ID__",
+  "type": "frontend",
+  "name": "Guest player launches a match",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Navigate to the app root at http://localhost:5173/"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the NomNom start screen is visible with PUBLIC ARENA, PLAY AS GUEST (FREE), LOGIN WALLET, and SPECTATE controls"
+    },
+    {
+      "type": "action",
+      "description": "Enter QA Guest in the GUEST NICKNAME field"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the nickname field contains QA Guest"
+    },
+    {
+      "type": "action",
+      "description": "Click PLAY AS GUEST (FREE) and wait for the game view to become active"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the start menu closes and the in-game HUD displays player mass and the active arena canvas"
+    }
+  ]
+}

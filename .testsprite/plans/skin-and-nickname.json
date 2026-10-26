@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.15.0/schemas/plan.schema.json",
+  "projectId": "__TESTSPRITE_PROJECT_ID__",
+  "type": "frontend",
+  "name": "Player customizes skin and nickname",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Navigate to the app root at http://localhost:5173/"
+    },
+    {
+      "type": "action",
+      "description": "Click Change Skin (8 Available)"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the skin chooser opens and presents the available skins including GigaChad"
+    },
+    {
+      "type": "action",
+      "description": "Select the GigaChad skin and close the skin chooser"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the play card shows Skin: GigaChad"
+    },
+    {
+      "type": "action",
+      "description": "Replace the GUEST NICKNAME value with QA NomNom"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the nickname input shows QA NomNom"
+    }
+  ]
+}

@@ -1,0 +1,1128 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;700;800&display=swap');
+
+:root {
+  --bg-primary: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-card: #ffffff;
+  --bg-card-dark: #1e293b;
+  --text-main: #0f172a;
+  --text-main-dark: #f8fafc;
+  --text-muted: #64748b;
+  --primary-green: #00E676;
+  --primary-blue: #2563EB;
+  --primary-purple: #9945FF;
+  --primary-cyan: #14F195;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #0b0f19;
+  color: #ffffff;
+  font-family: 'Ubuntu', 'Outfit', sans-serif;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   AUTHENTIC AGAR.IO LOGO & TYPOGRAPHY
+   ========================================================================== */
+
+.agar-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.agar-logo-letter {
+  display: inline-block;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1;
+  text-shadow: 
+    0 2px 0 rgba(0, 0, 0, 0.25),
+    0 4px 10px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease;
+  cursor: pointer;
+}
+
+.agar-logo-letter:hover {
+  transform: translateY(-4px);
+}
+
+.agar-letter-blue { color: #0080FF; }
+.agar-letter-red { color: #FF334B; }
+.agar-letter-yellow { color: #FFB300; }
+.agar-letter-green { color: #00E676; }
+.agar-letter-purple { color: #9945FF; }
+.agar-letter-cyan { color: #00E5FF; }
+.agar-letter-dot { color: #8F9CAE; font-size: 42px; margin: 0 -2px; }
+
+/* ==========================================================================
+   MODERN WEB3 GAMING CARDS & PANELS (Glassmorphism & Depth)
+   ========================================================================== */
+
+.agar-main-card {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 18px !important;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.16), 0 0 35px rgba(0, 230, 118, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(226, 232, 240, 0.95);
+  color: #1e293b;
+  position: relative;
+  overflow: hidden;
+}
+
+.agar-side-card {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 16px !important;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(226, 232, 240, 0.95);
+  color: #1e293b;
+}
+
+.agar-dark-mode .agar-main-card {
+  background: rgba(15, 23, 42, 0.92);
+  border: 1.5px solid rgba(51, 65, 85, 0.85);
+  color: #f8fafc;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.6), 0 0 35px rgba(0, 230, 118, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+.agar-dark-mode .agar-side-card {
+  background: rgba(15, 23, 42, 0.92);
+  border: 1.5px solid rgba(51, 65, 85, 0.85);
+  color: #f8fafc;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================================================
+   VIBRANT TACTILE GAMING BUTTONS
+   ========================================================================== */
+
+/* Main Gradient Green Play Button */
+.btn-agar-play {
+  width: 100%;
+  background: linear-gradient(135deg, #00FF87 0%, #00E676 50%, #00C853 100%);
+  color: #061e12;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  padding: 13px 22px;
+  border-radius: 14px !important;
+  border: 2px solid #00FF87;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 230, 118, 0.38), inset 0 1px 2px rgba(255, 255, 255, 0.5), inset 0 -2px 4px rgba(0, 0, 0, 0.15) !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-agar-play:hover {
+  background: linear-gradient(135deg, #1eff96 0%, #05f582 50%, #00d95d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 230, 118, 0.48), inset 0 1px 2px rgba(255, 255, 255, 0.6) !important;
+}
+
+.btn-agar-play:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 4px 12px rgba(0, 230, 118, 0.3) !important;
+}
+
+/* Vibrant Blue Action Button */
+.btn-agar-blue {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 18px;
+  border-radius: 12px !important;
+  border: 2px solid #60A5FA;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.35) !important;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-agar-blue:hover {
+  background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.45) !important;
+}
+
+.btn-agar-blue:active {
+  transform: translateY(1px);
+}
+
+/* Vibrant Purple Button */
+.btn-agar-purple {
+  background: linear-gradient(135deg, #A855F7 0%, #9945FF 100%);
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 18px;
+  border-radius: 12px !important;
+  border: 2px solid #C084FC;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(153, 69, 255, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.35) !important;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-agar-purple:hover {
+  background: linear-gradient(135deg, #C084FC 0%, #A855F7 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(153, 69, 255, 0.45) !important;
+}
+
+.btn-agar-purple:active {
+  transform: translateY(1px);
+}
+
+/* Glass Ghost Button */
+.btn-agar-ghost {
+  background: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+  color: #1e293b;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 9px 16px;
+  border-radius: 12px !important;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.agar-dark-mode .btn-agar-ghost {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f8fafc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.btn-agar-ghost:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+
+.agar-dark-mode .btn-agar-ghost:hover {
+  background: #283548;
+  border-color: #475569;
+}
+
+/* ==========================================================================
+   MODERN NICKNAME INPUT
+   ========================================================================== */
+
+.agar-input {
+  width: 100%;
+  height: 44px;
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px !important;
+  padding: 0 16px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: center;
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.15s ease;
+}
+
+.agar-input:focus {
+  background: #ffffff;
+  border-color: #00E676;
+  box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.25), inset 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+}
+
+.agar-dark-mode .agar-input {
+  background: #0f172a;
+  border-color: #334155;
+  color: #ffffff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.agar-dark-mode .agar-input:focus {
+  background: #1e293b;
+  border-color: #00E676;
+  box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.25), inset 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ==========================================================================
+   TACTILE STAKE CHIPS
+   ========================================================================== */
+
+.agar-stake-chip {
+  padding: 7px 12px;
+  border-radius: 10px !important;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+  border: 1.5px solid #cbd5e1;
+  transition: all 0.15s ease;
+  background: #f8fafc;
+  color: #475569;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+}
+
+.agar-stake-chip:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+
+.agar-stake-chip.active {
+  background: linear-gradient(135deg, #00FF87 0%, #00C853 100%) !important;
+  color: #0b0f19 !important;
+  border-color: #00FF87 !important;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(0, 230, 118, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.5) !important;
+}
+
+.agar-dark-mode .agar-stake-chip {
+  background: #0f172a;
+  border-color: #334155;
+  color: #94a3b8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.agar-dark-mode .agar-stake-chip:hover {
+  background: #1e293b;
+}
+
+.agar-dark-mode .agar-stake-chip.active {
+  background: linear-gradient(135deg, #00FF87 0%, #00C853 100%) !important;
+  color: #0b0f19 !important;
+  border-color: #00FF87 !important;
+}
+
+/* ==========================================================================
+   BADGES & HUD
+   ========================================================================== */
+
+.pulse-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 12px !important;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pulse-badge.er-active {
+  background: rgba(0, 230, 118, 0.1);
+  border: 1.5px solid #00E676;
+  color: #00E676;
+}
+
+.pulse-badge.er-active::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00E676;
+  animation: pulse-glow 1.5s infinite;
+}
+
+@keyframes pulse-glow {
+  0% { opacity: 0.5; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0.5; transform: scale(0.9); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Minimap container */
+.agar-minimap-box {
+  width: 140px;
+  height: 140px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0px !important;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  overflow: hidden;
+  box-shadow: none !important;
+  z-index: 85;
+}
+
+@keyframes modalPop {
+  0% {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN & MOBILE TOUCH CONTROLS
+   ========================================================================== */
+
+html, body, #root {
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+.agar-mobile-tabs-bar {
+  display: none;
+  width: 100%;
+  max-width: 440px;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.agar-mobile-tab-btn {
+  flex: 1;
+  background: #1e293b;
+  border: 2px solid #334155;
+  color: #94a3b8;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 8px 6px;
+  cursor: pointer;
+  border-radius: 0px !important;
+  text-align: center;
+  transition: all 0.15s ease;
+}
+
+.agar-mobile-tab-btn.active {
+  background: #00E676;
+  border-color: #00C853;
+  color: #0b0f19;
+}
+
+/* Responsive Menu Panels */
+/* Responsive Menu Overlays & Panels */
+.agar-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y !important;
+  padding: 16px 14px;
+}
+
+.agar-menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 980px;
+  margin: auto 0;
+  padding: 8px 0;
+  touch-action: pan-y !important;
+}
+
+.agar-menu-panel-left,
+.agar-menu-panel-center,
+.agar-menu-panel-right {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.btn-secondary-action {
+  min-height: 42px;
+  touch-action: manipulation;
+}
+
+@media (max-width: 860px) {
+  .agar-menu-overlay {
+    padding: 12px 10px;
+  }
+
+  .agar-mobile-tabs-bar {
+    display: flex;
+    max-width: 440px;
+    width: 100%;
+  }
+
+  .agar-menu-content-wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    max-width: 440px !important;
+    width: 100% !important;
+  }
+
+  .agar-side-card,
+  .agar-main-card {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-visible {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .agar-logo-letter {
+    font-size: 40px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .agar-menu-overlay {
+    padding: 10px 8px !important;
+  }
+
+  .agar-menu-container {
+    margin: 0 auto !important;
+    padding: 2px 0 !important;
+  }
+
+  .agar-menu-header {
+    margin-bottom: 8px !important;
+  }
+
+  .agar-logo-container {
+    margin-bottom: 4px !important;
+  }
+
+  .agar-logo-letter {
+    font-size: 32px !important;
+  }
+
+  .agar-er-badge {
+    padding: 3px 10px !important;
+    font-size: 10px !important;
+  }
+
+  .agar-mobile-tabs-bar {
+    margin-bottom: 8px !important;
+    gap: 4px !important;
+  }
+
+  .agar-mobile-tab-btn {
+    padding: 6px 4px !important;
+    font-size: 11px !important;
+  }
+
+  .agar-main-card {
+    padding: 14px 12px !important;
+  }
+
+  .agar-room-badge {
+    padding: 5px 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .agar-skin-carousel-box {
+    margin-bottom: 6px !important;
+    gap: 8px !important;
+  }
+
+  .agar-skin-preview-frame {
+    width: 58px !important;
+    height: 58px !important;
+  }
+
+  .agar-skin-preview-emblem {
+    font-size: 24px !important;
+  }
+
+  .agar-skin-label-box {
+    margin-bottom: 8px !important;
+  }
+
+  .agar-nickname-section {
+    margin-bottom: 8px !important;
+  }
+
+  .agar-input {
+    height: 38px !important;
+    font-size: 14px !important;
+    padding: 0 10px !important;
+  }
+
+  .agar-stake-section {
+    margin-bottom: 8px !important;
+  }
+
+  .agar-stake-chip {
+    padding: 6px 4px !important;
+    font-size: 11px !important;
+  }
+
+  .agar-actions-section {
+    margin-bottom: 8px !important;
+    gap: 6px !important;
+  }
+
+  .btn-agar-play {
+    padding: 10px 14px !important;
+    font-size: 15px !important;
+    min-height: 44px !important;
+  }
+
+  .btn-agar-ghost {
+    padding: 8px 10px !important;
+    font-size: 12px !important;
+    min-height: 40px !important;
+  }
+
+  .btn-secondary-action {
+    min-height: 40px !important;
+    font-size: 12px !important;
+    padding: 8px 6px !important;
+  }
+}
+
+@media (min-width: 861px) {
+  .mobile-hidden {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .mobile-visible {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+/* Responsive Menu Panels & Play Center Card */
+.agar-menu-panel-center {
+  flex: 0 0 420px;
+  width: 420px;
+  max-width: 100%;
+  padding: 22px 20px;
+}
+
+.agar-tilt-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.agar-tilt-col-left,
+.agar-tilt-col-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* GameOver Modal Base Layout (Desktop / Portrait) */
+.agar-gameover-card {
+  padding: 24px 20px;
+  max-width: 460px;
+  width: 100%;
+}
+
+.agar-gameover-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.agar-gameover-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.agar-gameover-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.agar-gameover-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Touch & on-screen controls (Split & Eject) */
+.agar-touch-controls {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 150;
+  pointer-events: auto;
+}
+
+.agar-touch-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px !important;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.08s ease, filter 0.08s ease, box-shadow 0.08s ease;
+}
+
+.agar-touch-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.agar-touch-btn:active {
+  transform: scale(0.92) translateY(2px) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
+}
+
+.agar-touch-btn-split {
+  background: linear-gradient(135deg, #00FF87 0%, #00DF68 50%, #00C853 100%) !important;
+  border: 2px solid #00FF87 !important;
+  color: #061e12 !important;
+}
+
+.agar-touch-btn-eject {
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%) !important;
+  border: 2px solid #FCD34D !important;
+  color: #061e12 !important;
+}
+
+/* Extraction Zone Floating Alert Banner (Base / Desktop) */
+.agar-extraction-banner {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px !important;
+  border: 2px solid #00E676 !important;
+  box-shadow: 0 10px 35px rgba(0, 230, 118, 0.35), 0 0 20px rgba(0, 230, 118, 0.2) !important;
+  z-index: 100;
+  background: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.agar-extraction-btn {
+  width: auto !important;
+  padding: 8px 18px !important;
+  font-size: 13px !important;
+  border-radius: 10px !important;
+  white-space: nowrap !important;
+  min-height: 38px !important;
+}
+
+.agar-hud-counter {
+  position: fixed;
+  bottom: 18px;
+  left: 18px;
+  border-radius: 12px !important;
+  z-index: 100;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+  .hud-desktop-only {
+    display: none !important;
+  }
+
+  .agar-touch-controls {
+    bottom: 18px !important;
+    right: 18px !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .agar-touch-btn {
+    width: 52px !important;
+    height: 52px !important;
+  }
+}
+
+/* ==========================================================================
+   WIDESCREEN RECTANGULAR TILT MODE (Mobile Landscape, max-height: 550px)
+   ========================================================================== */
+@media (max-height: 550px) and (orientation: landscape), (max-height: 480px), (max-width: 960px) and (orientation: landscape) and (max-height: 580px) {
+  .hud-desktop-only {
+    display: none !important;
+  }
+
+  /* Lobby Menu Overlay & Container */
+  .agar-menu-overlay {
+    padding: 6px 12px !important;
+  }
+
+  .agar-menu-container {
+    margin: auto !important;
+    padding: 0 !important;
+    max-width: 740px !important;
+    width: 100% !important;
+  }
+
+  .agar-menu-header {
+    margin-bottom: 6px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 14px !important;
+  }
+
+  .agar-logo-container {
+    margin-bottom: 0 !important;
+    gap: 1px !important;
+  }
+
+  .agar-logo-letter {
+    font-size: 26px !important;
+  }
+
+  .agar-er-badge {
+    padding: 4px 10px !important;
+    font-size: 9px !important;
+  }
+
+  .agar-mobile-tabs-bar {
+    display: none !important;
+  }
+
+  .agar-menu-content-wrapper {
+    flex-direction: row !important;
+    align-items: stretch !important;
+    max-width: 740px !important;
+    width: 96vw !important;
+    gap: 10px !important;
+  }
+
+  .agar-menu-panel-center {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    max-width: 740px !important;
+    padding: 10px 16px !important;
+    border-radius: 16px !important;
+  }
+
+  .agar-tilt-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  .agar-tilt-col-left {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  .agar-tilt-col-right {
+    flex: 1.15 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  .agar-room-badge {
+    padding: 4px 8px !important;
+    margin-bottom: 6px !important;
+    font-size: 10px !important;
+    border-radius: 8px !important;
+  }
+
+  .agar-skin-preview-frame {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 14px !important;
+  }
+
+  .agar-skin-preview-emblem {
+    font-size: 20px !important;
+  }
+
+  .agar-skin-carousel-box {
+    margin-bottom: 4px !important;
+    gap: 8px !important;
+  }
+
+  .agar-skin-label-box {
+    margin-bottom: 4px !important;
+    font-size: 12px !important;
+  }
+
+  .agar-nickname-section {
+    margin-bottom: 6px !important;
+  }
+
+  .agar-input {
+    height: 34px !important;
+    font-size: 13px !important;
+    border-radius: 10px !important;
+  }
+
+  .agar-stake-section {
+    margin-bottom: 6px !important;
+  }
+
+  .agar-stake-chip {
+    padding: 4px 5px !important;
+    font-size: 10px !important;
+    border-radius: 8px !important;
+  }
+
+  .agar-actions-section {
+    margin-bottom: 0 !important;
+    gap: 6px !important;
+  }
+
+  .btn-agar-play {
+    padding: 9px 12px !important;
+    font-size: 14px !important;
+    min-height: 40px !important;
+    border-radius: 12px !important;
+  }
+
+  .btn-secondary-action {
+    min-height: 36px !important;
+    font-size: 11px !important;
+    padding: 6px 8px !important;
+    border-radius: 10px !important;
+  }
+
+  .agar-menu-tip {
+    display: none !important;
+  }
+
+  /* Fixed Ergonomic Thumb Position for Landscape: NEVER goes downside */
+  .agar-touch-controls {
+    position: fixed !important;
+    bottom: 18px !important;
+    right: 18px !important;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    align-items: flex-end !important;
+    gap: 12px !important;
+    z-index: 150 !important;
+  }
+
+  .agar-touch-btn {
+    width: 62px !important;
+    height: 52px !important;
+  }
+
+  /* Extraction Vortex Banner in Landscape: Anchored to TOP Center so it NEVER blocks bottom screen */
+  .agar-extraction-banner {
+    position: fixed !important;
+    top: 10px !important;
+    bottom: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    padding: 6px 14px !important;
+    gap: 10px !important;
+    border-radius: 24px !important;
+    max-width: 90vw !important;
+    z-index: 110 !important;
+    box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4) !important;
+  }
+
+  .agar-extraction-text {
+    display: none !important;
+  }
+
+  .agar-extraction-btn {
+    padding: 5px 12px !important;
+    font-size: 11px !important;
+    min-height: 30px !important;
+    border-radius: 8px !important;
+  }
+
+  /* Compact Leaderboard next to top-right Minimap */
+  .agar-leaderboard-container {
+    position: fixed !important;
+    right: 104px !important;
+    top: 10px !important;
+    max-width: 140px !important;
+    padding: 4px 8px !important;
+    font-size: 11px !important;
+    border-radius: 10px !important;
+    z-index: 90 !important;
+  }
+
+  .agar-leaderboard-list {
+    max-height: calc(100dvh - 90px) !important;
+    overflow-y: auto !important;
+  }
+
+  /* 2-Column Unclipped GameOver in Landscape */
+  .agar-gameover-overlay {
+    padding: 8px !important;
+  }
+
+  .agar-gameover-card {
+    padding: 10px 14px !important;
+    max-width: 620px !important;
+    width: 95vw !important;
+    margin: auto !important;
+    border-radius: 16px !important;
+  }
+
+  .agar-gameover-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 14px !important;
+  }
+
+  .agar-gameover-col-left {
+    flex: 1.15 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+  }
+
+  .agar-gameover-header {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
+    gap: 10px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .agar-gameover-skull-badge {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 10px !important;
+  }
+
+  .agar-gameover-title {
+    font-size: 17px !important;
+  }
+
+  .agar-gameover-subtitle {
+    font-size: 11px !important;
+    margin-top: 2px !important;
+  }
+
+  .agar-gameover-stats {
+    margin: 4px 0 !important;
+    gap: 6px !important;
+  }
+
+  .agar-gameover-stat-box {
+    padding: 4px 3px !important;
+    border-radius: 8px !important;
+  }
+
+  .agar-gameover-col-right {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 6px !important;
+  }
+
+  .agar-gameover-btn-play {
+    padding: 10px 12px !important;
+    font-size: 15px !important;
+    min-height: 44px !important;
+    border-radius: 12px !important;
+  }
+
+  .agar-gameover-sub-actions button {
+    min-height: 36px !important;
+    font-size: 11px !important;
+    padding: 5px 6px !important;
+    border-radius: 10px !important;
+  }
+
+  /* Compact Bottom-Left HUD in Landscape: NEVER goes downside */
+  .agar-hud-counter {
+    position: fixed !important;
+    bottom: 16px !important;
+    left: 16px !important;
+    padding: 5px 10px !important;
+    border-radius: 12px !important;
+    font-size: 11px !important;
+    gap: 8px !important;
+    max-width: calc(100vw - 180px) !important;
+    z-index: 100 !important;
+  }
+}
+
+

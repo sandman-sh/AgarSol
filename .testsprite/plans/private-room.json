@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.15.0/schemas/plan.schema.json",
+  "projectId": "__TESTSPRITE_PROJECT_ID__",
+  "type": "frontend",
+  "name": "Player creates a private room",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Navigate to the app root at http://localhost:5173/"
+    },
+    {
+      "type": "action",
+      "description": "Open the ROOMS tab or the Multiplayer Rooms panel"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the panel shows the PUBLIC ARENA active channel and a CREATE PRIVATE ROOM button"
+    },
+    {
+      "type": "action",
+      "description": "Click CREATE PRIVATE ROOM"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify a private room is created, the active channel changes to a room code, and COPY INVITE plus PUBLIC controls appear"
+    },
+    {
+      "type": "action",
+      "description": "Click PUBLIC to leave the private room"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the active channel returns to the Global Public Arena"
+    }
+  ]
+}

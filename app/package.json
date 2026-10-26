@@ -1,0 +1,40 @@
+{
+  "name": "app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "testsprite:local": "node ../testsprite/run-local.mjs"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.32.1",
+    "@magicblock-labs/ephemeral-rollups-sdk": "^0.17.3",
+    "@solana/wallet-adapter-base": "^0.9.28",
+    "@solana/wallet-adapter-react": "^0.15.40",
+    "@solana/wallet-adapter-react-ui": "^0.9.40",
+    "@solana/wallet-adapter-wallets": "^0.19.40",
+    "@solana/web3.js": "^1.99.0",
+    "@supabase/supabase-js": "^2.117.3",
+    "@types/canvas-confetti": "^1.9.0",
+    "bs58": "^6.0.0",
+    "buffer": "^6.0.3",
+    "canvas-confetti": "^1.9.4",
+    "lucide-react": "^1.55.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0",
+    "vite-plugin-node-polyfills": "^0.28.0"
+  }
+}

@@ -1,0 +1,24 @@
+# Solana & Anchor keypairs
+*-keypair.json
+*.keypair.json
+id.json
+
+# Rust build targets
+target/
+**/*.rs.bk
+
+# Dependencies and builds
+node_modules/
+dist/
+*.log
+.env
+.env*.local
+
+# TestSprite local run artifacts and machine-specific project config
+.testsprite/runs/
+.testsprite/config.json
+
+# System & IDE
+.DS_Store
+.vscode/
+.idea/

@@ -13,6 +13,7 @@ dist/
 *.log
 .env
 .env*.local
+__pycache__/
 
 # TestSprite local run artifacts and machine-specific project config
 .testsprite/runs/

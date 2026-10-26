@@ -1,0 +1,38 @@
+{
+  "projectId": "824d768c-ed6f-431e-94ce-aae495746cbe",
+  "projectName": "NomNom Agar.sol",
+  "targetUrl": "https://agar-sol.vercel.app/",
+  "environment": "agar-sol",
+  "tests": [
+    {
+      "id": "696dbf4d-43e8-4a9c-9dc0-667512ab9c71",
+      "name": "Guest player launches a match",
+      "code": "tests/guest_player_launch.py",
+      "result": "results/guest_player_launch.json",
+      "latestRunId": "29c9f1c2-f79d-4486-ab19-07314b8bfa2b",
+      "status": "passed"
+    },
+    {
+      "id": "fc71096b-7d13-47f9-b745-58ce4f8c1b58",
+      "name": "Player creates a private room",
+      "code": "tests/private_room.py",
+      "result": "results/private_room.json",
+      "latestRunId": "89a28263-d2f8-474c-af9d-6f72ecad87c3",
+      "status": "passed"
+    },
+    {
+      "id": "72bceca4-3894-40bb-8414-c6a2371c6c9c",
+      "name": "Player customizes skin and nickname",
+      "code": "tests/skin_and_nickname.py",
+      "result": "results/skin_and_nickname.json",
+      "latestRunId": "e7ca24a5-b90b-46f8-ab0a-e21c1f396819",
+      "status": "passed"
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "timedOut": 0
+  }
+}
